@@ -10,3 +10,6 @@ db/*.db
 
 #Build
 build
+
+#MacOS config
+.DS_Store
