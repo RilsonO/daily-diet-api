@@ -1,0 +1,17 @@
+{
+  "eslint.enable": true,
+  "editor.formatOnSave": false,
+  "git.ignoreLimitWarning": true,
+  "cSpell.words": [
+    "criar",
+    "deve",
+    "fastify",
+    "Fastify",
+    "funcionais",
+    "middlewares",
+    "poder",
+    "requisitos",
+    "transação",
+    "usuário"
+  ]
+}
