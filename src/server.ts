@@ -1,13 +1,16 @@
 import fastify from 'fastify'
+import { usersRoutes } from './routes/users'
 
 const app = fastify()
 
-app.get('/hello', () => {
-  return 'Hello world'
+app.register(usersRoutes, {
+  prefix: 'users',
 })
 
 app
   .listen({
     port: 3333,
   })
-  .then(() => console.log('Http server Running!'))
+  .then(() => {
+    console.log('Http server Running!')
+  })
