@@ -60,7 +60,7 @@ export async function mealsRoutes(app: FastifyInstance) {
         })
         .returning('*')
 
-      return reply.status(201).send({ meal })
+      return reply.status(201).send({ meal: meal[0] })
     },
   )
 
@@ -86,7 +86,7 @@ export async function mealsRoutes(app: FastifyInstance) {
         })
         .returning('*')
 
-      return reply.status(200).send({ meal })
+      return reply.status(200).send({ meal: meal[0] })
     },
   )
 
@@ -97,7 +97,7 @@ export async function mealsRoutes(app: FastifyInstance) {
       .orderBy('date', 'desc')
       .select('*')
 
-    return reply.status(201).send({ meals })
+    return reply.status(200).send({ meals })
   })
 
   app.delete(

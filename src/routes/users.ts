@@ -28,7 +28,7 @@ export async function usersRoutes(app: FastifyInstance) {
         })
         .returning('*')
 
-      return reply.status(201).send({ user })
+      return reply.status(201).send({ user: user[0] })
     },
   )
   app.post('/login', async (request, reply) => {

@@ -1,20 +1,9 @@
-import fastify from 'fastify'
-import { usersRoutes } from './routes/users'
-import { mealsRoutes } from './routes/meals'
-
-const app = fastify()
-
-app.register(usersRoutes, {
-  prefix: 'users',
-})
-
-app.register(mealsRoutes, {
-  prefix: 'meals',
-})
+import { app } from './app'
+import { env } from './env'
 
 app
   .listen({
-    port: 3333,
+    port: env.PORT,
   })
   .then(() => {
     console.log('Http server Running!')
